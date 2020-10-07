@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+.main{
+    padding: 50px 50px 0px 50px;
+}
+.header{
+    background: #2a9d8f;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+.nav-item{
+    text-align: right;
+    color: #ffffff;
+    padding: 60px;
+    font-size: 30px;
+}
+.nav-link:link, .nav-link:visited{
+    text-decoration: none;
+    color: #ffffff !important;
+}
+.text-box{
+    position: absolute;
+    top: 120px;
+}
+.primary-text{
+    font-size: 150px;
+    font-weight: 800;
+    line-height: 1;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;  
+}
+.sub-text{
+    font-size: 50px;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px) rotate(0deg);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(0);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-100);
+    }
+}
+.header-img{
+    margin-top: -130px;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+.logo-img{
+    margin-top: -25px;
+    width: 100px;
+}
+@media only screen and (max-width: 1025px) {
+    .main{
+        margin: 0;
+        padding: 25px 25px 0px 25px; 
+    }
+    .sub-text{
+        margin-top: 10%;
+    }
+    .header{
+        width: fit-content;
+    }
+    .header-img{
+        margin-top: 5px;
+        height: fit-content;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .chumma{
+        text-align: center;
+    }
+}
+/*Navbar*/
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    background: #2a9d8f;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.4s ease;
+}
+
+.affix {
+    padding: 0;
+    background-color: #2a9d8f;
+}
+
+
+.chumma{
+    text-align: center;
+}
+
