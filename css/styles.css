@@ -115,7 +115,7 @@ body {
     
 }
 .what-opacity{
-    opacity: .7;
+    opacity: 60%;
 }
 .what-text{
     position: absolute;
@@ -201,9 +201,6 @@ body {
     html{
         margin-right: -100px;
         
-    }
-    body{
-        padding-bottom: 200px;
     }
     .what-img{
         width: 100%;
