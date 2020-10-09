@@ -112,13 +112,17 @@ body {
 }
 .what-img{
     width: 100vw;
+    
+}
+.what-opacity{
+    opacity: .7;
 }
 .what-text{
     position: absolute;
     left: 760px;
     top: 1000px;
     color: #fff;
-    
+    opacity: 1;
 }
 @media only screen and (min-width: 1025px) {
     .header-img{
