@@ -258,7 +258,7 @@ body {
     font-size: 25px;
 }
 /*desktops and laptops*/
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1090px) {
     .header-img{
         margin-top: -130px;
     }
@@ -372,7 +372,7 @@ body {
     }
 } 
 /* iPads and Tablets */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1089px) { 
     .brand-img{
         width: 120px;
     }
