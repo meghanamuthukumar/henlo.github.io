@@ -2,9 +2,15 @@
 *{ 
 	-webkit-box-sizing:border-box; 
 	-moz-box-sizing:border-box; 
-	box-sizing:border-box; 
+    box-sizing:border-box; 
+    outline: none !important;
+    box-shadow: none !important;
+    
 } 
-
+html{
+    background: #ffffff;
+    scroll-behavior: smooth;
+}
 html, body{
     overflow-x: hidden;
 }
@@ -15,6 +21,7 @@ body {
     line-height: 1.7;
     color: #ffffff;
     overflow-x: hidden;
+    padding-bottom: 100px;
 }
 .hamburger-menu{
     width: 55px;
@@ -110,9 +117,26 @@ body {
     margin-top: -25px;
     width: 100px;
 }
+.what-also{
+    width: 100%;
+    opacity: 60%;
+}
 .what-img{
     width: 100vw;
-    
+}
+.what-also-primary{
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 144px;
+    letter-spacing: 0em;
+    text-align: center !important;
+    color: #ffffff;
+    position: absolute;
+    left: 317px;
+    top: 1643px;
+    opacity: 1 !important;
+
 }
 .what-opacity{
     opacity: 60%;
@@ -124,6 +148,116 @@ body {
     color: #fff;
     opacity: 1;
 }
+.adoption-form{
+    background: #2a9d8f;
+    text-align: right;
+    color: #ffffff;
+    padding: 70px;
+}
+.adopt-primary{
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 144px;
+    letter-spacing: 0em;
+    text-align: right;
+
+}
+.adopt-sub{
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+.form-control{
+    border-radius: 0 !important;
+    margin-bottom: 15px;
+    border: 0 !important;
+    box-shadow: 0 !important;
+}
+*:focus {
+    outline: none !important;
+}
+
+.form-control:focus, input:focus, .btn:focus{
+    outline: none !important;
+    box-shadow: 0 !important;
+}
+.btn-submit{
+    border-radius: 0 !important;
+    padding: 35px 25px;
+    float: left;
+    color: #ffffff  !important;
+    background: #F15A24 !important;
+}
+.btn-text{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 31px;
+    letter-spacing: 0em;
+}
+.why-us{
+    background: #F4A261;
+}
+.newsletter-content{
+    color: #ffffff;
+    padding: 55px;
+    position: relative;
+    left: 748px;
+}
+.newsletter-primary1{
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 144px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.newsletter-sub, .testimonials-sub{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 61px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.newsletter-primary2{
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 82px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.newsletter-input{
+    padding: 15px 10px;
+}
+.testimonials-text{
+    background: #2A9D8F;
+    color: #ffffff;
+    padding: 55px 95px !important;
+}
+.testimonials-primary{
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 91px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.card{
+    background: #F2F2F2 !important;
+    margin: 40px !important;
+    text-align: center;
+    border: none !important;
+}
+.stars{
+    font-size: 25px;
+}
+/*desktops and laptops*/
 @media only screen and (min-width: 1025px) {
     .header-img{
         margin-top: -130px;
@@ -139,15 +273,19 @@ body {
         height: 80px;
     }
     .what-text{
-        font-weight: 700;
+        font-weight: 600;
         font-size: 135px;
         line-height: 1.1;
         text-align: right;
     }
     html{
         overflow-x: hidden;
-    } 
+    }
+    .newsletter-input{
+        width: 408px;
+    }
 }
+
 /*mobile screen*/
 @media only screen and (max-width: 450px) {
     .main{
@@ -155,21 +293,22 @@ body {
         padding-left: 10px;
     }
     .primary-text{
-        font-size: 25px;
+        font-size: 70px;
+        font-weight: 600;
     }
     .sub-text{
-        font-size: 10px;
+        font-size: 25px;
     }
     .header{
         background: #2a9d8f;
         color: #ffffff;
-        height: fit-content;
+        /* height: fit-content; */
         width: fit-content;
         box-sizing: border-box;
     }
     .header-img{
-        margin-top: 5px;
-        width: 50%;
+        margin-top: 30px;
+        width: 55%;
         height: auto;
         display: block;
     }
@@ -183,14 +322,53 @@ body {
     .brand-img{
         width: 70px;
     }
+    .what-content{
+        margin-bottom: -116px;
+    }
     .what-text{
         position: relative;
         top: -160px;
         left: -25px !important;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 35px;
         line-height: 1.1;
         text-align: right;
+    } 
+    .newsletter-content{
+        left: 0;
+    }
+    .newsletter-input{
+        padding: 5px 3px;
+        width: 220px;
+    }
+    .testimonials-text{
+        padding: 50px !important;
+    }
+    .adopt-primary{
+        font-size: 60px;
+        line-height: 0.9;
+    }
+    .adopt-sub{
+        font-size:px ;
+    }
+    .newsletter-primary1{
+        font-size: 55px;
+        line-height: 0.9;
+    }
+    .newsletter-primary2{
+        font-size: 42px;
+        line-height: 0.9;
+    }
+    .newsletter-sub, .testimonials-sub{
+        font-size: 30px;
+        line-height: 1.1;
+    }
+    .testimonials-primary{
+        font-size: 50px;
+        line-height: 1;
+    }
+    .what-also-primary{
+        display: none;
     }
 } 
 /* iPads and Tablets */
@@ -212,19 +390,36 @@ body {
         position: relative;
         top: -340px;
         left: -80px !important;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 75px;
         line-height: 1.1;
         text-align: right;
     }
     .primary-text{
-        font-size: 60px;
+        font-size: 120px;
+        font-weight: 600;
     }
     .sub-text{
-        font-size: 25px;
+        font-size: 35px;
+
     }
     .nav-item{
         padding-left: 20px;
         font-size: 20px;
+    }
+    .what-content{
+        margin-bottom: -248px;
+    }
+    .newsletter-content{
+        left: 500px;
+    }
+    .newsletter-input{
+        width: 408px;
+    }
+    .what-also{
+        width: 100%;
+    }
+    .what-also-primary{
+        display: none;
     }
 } 
