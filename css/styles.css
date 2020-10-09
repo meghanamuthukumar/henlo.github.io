@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{ 
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box; 
+} 
 
+html, body{
+    overflow-x: hidden;
+}
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -8,8 +16,29 @@ body {
     color: #ffffff;
     overflow-x: hidden;
 }
+.hamburger-menu{
+    width: 55px;
+}
+.navbar{
+    background: #2a9d8f;
+    padding:4px 0;
+    animation:slide-down 0.7s;
+    opacity:0.9;   
+}
+.nav-link{
+    text-decoration: none;
+    color: #fff;
+}
+.nav-link:focus, .nav-link:visited{
+    text-decoration: none;
+    color: #ffffff;
+}
+.navbar-toggler{
+    color: #fff;
+    background: #fff;
+}
 .main{
-    padding: 50px 50px 0px 50px;
+    padding: 50px 0px 0px 50px;
 }
 .header{
     background: #2a9d8f;
@@ -17,16 +46,7 @@ body {
     height: 100%;
     width: 100%;
 }
-.nav-item{
-    text-align: right;
-    color: #ffffff;
-    padding: 60px;
-    font-size: 30px;
-}
-.nav-link:link, .nav-link:visited{
-    text-decoration: none;
-    color: #ffffff !important;
-}
+
 .text-box{
     position: absolute;
     top: 120px;
@@ -44,14 +64,23 @@ body {
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
 }
-
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    } 
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    } 
+}
 @keyframes moveInLeft {
     0%{
         opacity: 0;
         transform: translateX(-100px) rotate(0deg);
     }
     80%{
-        transform: translateX(10px);
+        opacity: 0.5;
     }
     100%{
         opacity: 1;
@@ -72,74 +101,129 @@ body {
     }
 }
 .header-img{
-    margin-top: -130px;
-    animation-name: moveInRight;
+    animation-name: moveInLeft;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
+    float: right;
 }
 .logo-img{
     margin-top: -25px;
     width: 100px;
 }
-@media only screen and (max-width: 1025px) {
+.what-img{
+    width: 100vw;
+}
+.what-text{
+    position: absolute;
+    left: 760px;
+    top: 1000px;
+    color: #fff;
+    
+}
+@media only screen and (min-width: 1025px) {
+    .header-img{
+        margin-top: -130px;
+    }
+    .brand-img{
+        width: 120px;
+    }
+    .nav-item{
+        padding: 35px;
+        font-size: 30px;
+    }
+    .navbar{
+        height: 80px;
+    }
+    .what-text{
+        font-weight: 700;
+        font-size: 135px;
+        line-height: 1.1;
+        text-align: right;
+    }
+    html{
+        overflow-x: hidden;
+    } 
+}
+
+@media only screen and (max-width: 450px) {
     .main{
-        margin: 0;
-        padding: 25px 25px 0px 25px; 
+        margin-top: -50px;
+        padding-left: 10px;
+    }
+    .primary-text{
+        font-size: 25px;
     }
     .sub-text{
-        margin-top: 10%;
+        font-size: 10px;
     }
     .header{
+        background: #2a9d8f;
+        color: #ffffff;
+        height: fit-content;
         width: fit-content;
+        box-sizing: border-box;
     }
     .header-img{
         margin-top: 5px;
-        height: fit-content;
+        width: 50%;
+        height: auto;
+        display: block;
     }
     body{
+        
+        margin: 0;
+    }
+    html{
         overflow-x: hidden;
+    } 
+    .brand-img{
+        width: 70px;
     }
-    .chumma{
-        text-align: center;
+    .what-text{
+        position: relative;
+        top: -160px;
+        left: -25px !important;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.1;
+        text-align: right;
     }
-}
-/*Navbar*/
-
-.nav {
-    width: 100%;
-    height: 65px;
-    position: fixed;
-    line-height: 65px;
-    text-align: center;
-    background: #2a9d8f;
-}
-
-.nav div.logo {
-    float: left;
-    width: auto;
-    height: auto;
-    padding-left: 3rem;
-}
-.nav div.logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 2.5rem;
-}
-
-.nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-transition: all 0.8s ease;
-    transition: all 0.4s ease;
-}
-
-.affix {
-    padding: 0;
-    background-color: #2a9d8f;
-}
-
-
-.chumma{
-    text-align: center;
-}
-
+} 
+/* iPads and Tablets */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { 
+    .brand-img{
+        width: 120px;
+    }
+    html{
+        margin-right: -100px;
+        
+    }
+    body{
+        padding-bottom: 200px;
+    }
+    .what-img{
+        width: 100%;
+    }
+    .header-img{
+        width: 590px;
+    }
+    .what-text{
+        position: relative;
+        top: -340px;
+        left: -80px !important;
+        font-weight: 700;
+        font-size: 75px;
+        line-height: 1.1;
+        text-align: right;
+    }
+    .primary-text{
+        font-size: 60px;
+    }
+    .sub-text{
+        font-size: 25px;
+    }
+    .nav-item{
+        padding-left: 20px;
+        font-size: 20px;
+    }
+} 
