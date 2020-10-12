@@ -161,11 +161,17 @@ body {
     height: 100vh;
     position: relative; */
 }
+.wabbit{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
 .adoption-form{
     background: #2a9d8f;
     text-align: right;
     color: #ffffff;
-    padding: 70px;
+    padding: 90px;
+    
 }
 .adopt-primary{
     font-size: 96px;
@@ -211,6 +217,12 @@ body {
     font-weight: 300;
     line-height: 31px;
     letter-spacing: 0em;
+}
+.cats-group{
+    position: absolute;
+    left: -170px;
+    top: 3450px;
+    width: 75%;
 }
 .why-us{
     background: #F4A261;
@@ -297,6 +309,19 @@ body {
     .newsletter-input{
         width: 408px;
     }
+    html{
+        overflow-x: hidden;
+    } 
+    .adoption-form{
+        margin-right: -30px;
+    }
+    .wabbit{
+        height: 100%;
+    }
+    .adoption-form, .wabbit{
+        margin-bottom: -120px;
+    }
+    
 }
 
 /*mobile screen*/
@@ -383,6 +408,9 @@ body {
     .what-also-primary{
         display: none;
     } 
+    .cats-group{
+        display: none;
+    }
 } 
 /* mohan's */
 @media only screen and (min-device-width : 451px) and (max-device-width : 767px) { 
@@ -469,6 +497,9 @@ body {
     .what-also-primary{
         display: none;
     }
+    .cats-group{
+        display: none;
+    }
 }
 /* iPads and Tablets */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1089px) { 
@@ -519,6 +550,9 @@ body {
         width: 100%;
     }
     .what-also-primary{
+        display: none;
+    }
+    .cats-group{
         display: none;
     }
 } 
